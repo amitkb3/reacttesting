@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Testing App
 
-## Available Scripts
+This app was developed based on the training from Udemy Course [Advanced React and Redux: 2018 Edition](https://www.udemy.com/react-redux-tutorial/) taught by Stephen Grider
 
-In the project directory, you can run:
+### User Stories
 
-### `npm start`
+* User can type comments in a text area and submit by pressing button.
+* The textarea will be cleared after each submit
+* The User's comments will be displayed below in the comment list area
+* The User can also fetches list of comments from the JsonPlaceholder Api's comment endpoint by pressing 'Fetch Comments' button
+* The fetch comments will also be displayed in the Comment List Area
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Purpose
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The purpose of this app is to use Jest and Enzyme packages to conduct unit and integration Testing.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Following Tests were performed:
+1. Unit Tests for App Component
+  * shows a comment box 
+  * shows a comment list 
+2. Unit Tests for Comment Box Component
+  * has a text area and two button 
+  * has a text area that users can type in
+  * when form is submitted,text area gets emptied 
+3. Unit Tests for Comment List Component
+  * creates one LI per comment 
+  * shows the text for each comment
+4. Unit Tests for Reducers
+  * handles actions of type SAVE_COMMENT
+  * handles action with unknown type 
+5. Unit Tests for Actions
+  * has the correct type
+  * has the correct payload
+5. Integration Test for App
+  * can fetch a list of comments and display them
