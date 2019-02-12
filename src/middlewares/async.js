@@ -1,7 +1,5 @@
-export default function() {
-  return function() {
-    return function() {
-      
-    }
-  }
+export default ({ dispatch }) => next => action => {
+  
+
 }
+  
